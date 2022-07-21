@@ -38,3 +38,11 @@ def get_index():
     return {
         "message": "La documentation est disponible au /docs."
     }
+
+
+@api.put("/bye")
+def put_bye():
+    return {
+        "bye": "bye",
+        "other": "ceci n'est pas testé c'est en plus mais ça pas"
+    }

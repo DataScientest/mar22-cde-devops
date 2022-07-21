@@ -45,3 +45,15 @@ def test_get_index():
     data = response.json()
 
     assert "message" in data
+
+
+def test_put_bye():
+    response = requests.put(
+        url=f"{API_URL}/bye"
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+
+    assert "bye" in data
+    assert data["bye"] == "bye"
