@@ -32,8 +32,9 @@ def get_health():
         "status": 1
     }
 
+
 @api.get("/")
 def get_index():
     return {
-        "mesage": "La documentation est disponible au /docs."
+        "message": "La documentation est disponible au /docs."
     }
