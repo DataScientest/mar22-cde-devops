@@ -30,3 +30,18 @@ def test_get_health():
 
     assert "status" in data
     assert data["status"] == 1
+
+
+# GET /
+# -> message qui renvoie vers la doc
+
+def test_get_index():
+    response = requests.get(
+        url=f"{API_URL}/"
+    )
+
+    assert response.status_code == 200, response.content
+
+    data = response.json()
+
+    assert "message" in data
